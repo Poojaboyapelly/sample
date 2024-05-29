@@ -42,6 +42,10 @@ h1 {
   border-radius: 5px;
 }
 
+.TodoWrapper h1{
+  color:whitesmoke;
+}
+
 .TodoForm {
   width: 100%;
   margin-bottom: 1rem;
