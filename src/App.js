@@ -4,7 +4,7 @@ import AdminPortal from './Portals/AdminPortal';
 import UserPortal from './Portals/UserPortal';
 import Home from './components/Home';
 import { TodoWrapper } from '../src/components/todo/TodoWrapper'
-import './App.css';
+import './App.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import EmployeePortal from './Portals/EmployeePortal';
 
