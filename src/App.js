@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './components/Home';
-import { TodoWrapper } from '../src/components/todo/TodoWrapper'
+import { TodoWrapper } from '../src/components/todo/TodoWrapper';
+import ChainedEffectsExample from './UseEffectExample';
+import FormikForm from './FormikForm';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -22,10 +24,13 @@ const App = () => (
                 <Link className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/formik">Formik</Link>
+                <Link className="nav-link" to="/todo">Todo App</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/todo">Todo App</Link>
+                <Link className="nav-link" to="/use-effect">use effect chaining</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/formik">Formik</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/ems">EMS</Link>
@@ -38,8 +43,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/todo" element={<TodoWrapper />} />
-          
-
+          <Route path="/use-effect" element={<ChainedEffectsExample />} />
+          <Route path="/formik" element={<FormikForm />} />
         </Routes>
 
       </div>
