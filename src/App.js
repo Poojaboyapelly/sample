@@ -5,9 +5,12 @@ import UserPortal from './Portals/UserPortal';
 import Home from './components/Home';
 import { TodoWrapper } from '../src/components/todo/TodoWrapper'
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import EmployeePortal from './Portals/EmployeePortal';
+
 
 const App = () => (
-  
+
   <Router>
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -30,6 +33,9 @@ const App = () => (
               <li className="nav-item">
                 <Link className="nav-link" to="/todo">Todo App</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/ems">EMS</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -39,12 +45,18 @@ const App = () => (
           <Route path="/" element={<Home />} />
           <Route path="/user/*" element={<UserPortal />} />
           <Route path="/admin/*" element={<AdminPortal />} />
-          <Route path="/todo" element={<TodoWrapper/>}/>
+          <Route path="/todo" element={<TodoWrapper />} />
+          <Route path='/ems/*' element={<EmployeePortal />} />
+
         </Routes>
+
       </div>
     </div>
   </Router>
-  
+
+
+
+
 );
 
 export default App;
